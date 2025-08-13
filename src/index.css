@@ -1,3 +1,9 @@
+:root {
+  --bg: #2b2f36;
+  --text: #ecebee;
+  --elevated: #434a56;
+  --shadow: #161a20;
+}
 
 .hole {
   background: url("/hole.png") no-repeat center/contain;
@@ -7,3 +13,39 @@
   background-image: url("/mole.png");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+main p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+main button {
+  margin-top: 1rem;
+  width: 6rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+main button:hover {
+  background-color: var(--elevated);
+  color: var(--text);
+  box-shadow: 5px 5px var(--shadow);
+  font-weight: bold;
+}
