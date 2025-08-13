@@ -3,19 +3,23 @@
   --text: #ecebee;
   --elevated: #434a56;
   --shadow: #161a20;
+  --border: #4a5260;
 }
 
 .hole {
   background: url("/hole.png") no-repeat center/contain;
+  cursor: pointer;
 }
 
 .mole {
   background-image: url("/mole.png");
+  cursor: pointer;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: var(--bg);
@@ -31,14 +35,13 @@ main {
 }
 
 main p {
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   font-size: 1.2rem;
 }
 
-main button {
+#play-btn {
   margin-top: 1rem;
   width: 6rem;
-  height: 1.5rem;
   border: none;
   border-radius: 0.2rem;
 }
@@ -48,4 +51,36 @@ main button:hover {
   color: var(--text);
   box-shadow: 5px 5px var(--shadow);
   font-weight: bold;
+}
+
+.player-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+.player-panel p,
+button {
+  border: 1px solid var(--border);
+  width: 10rem;
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#restart-btn:hover {
+  background-color: var(--elevated);
+  cursor: pointer;
+}
+
+.gameboard {
+  margin-top: 1rem;
+  /* border: 1px solid var(--border); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-width: 45%;
+  min-height: 45vh;
+  /* gap: 0.8rem; */
 }
